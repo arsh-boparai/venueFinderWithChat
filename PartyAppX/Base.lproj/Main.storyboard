@@ -34,7 +34,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vGo-7B-AEP">
-                                <rect key="frame" x="33" y="299" width="308" height="30"/>
+                                <rect key="frame" x="33" y="234" width="308" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="oYP-vN-1Cb"/>
                                 </constraints>
@@ -43,7 +43,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SPd-pU-KOV">
-                                <rect key="frame" x="33" y="357" width="308" height="30"/>
+                                <rect key="frame" x="33" y="276" width="308" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="2Nk-Gn-Y9H"/>
                                 </constraints>
@@ -52,10 +52,10 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PartyX" translatesAutoresizingMaskIntoConstraints="NO" id="Jpw-Gp-fAk">
-                                <rect key="frame" x="102" y="102" width="173" height="178"/>
+                                <rect key="frame" x="102" y="67" width="173" height="178"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfr-fg-MiP">
-                                <rect key="frame" x="33" y="416" width="308" height="30"/>
+                                <rect key="frame" x="33" y="321" width="308" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="s1h-hS-O0t"/>
@@ -73,17 +73,17 @@
                         <constraints>
                             <constraint firstItem="CzZ-8O-Cmz" firstAttribute="centerX" secondItem="Jpw-Gp-fAk" secondAttribute="centerX" id="4S9-tu-8Jq"/>
                             <constraint firstItem="vGo-7B-AEP" firstAttribute="leading" secondItem="SPd-pU-KOV" secondAttribute="leading" id="5B1-O8-rj5"/>
-                            <constraint firstItem="rfr-fg-MiP" firstAttribute="top" secondItem="SPd-pU-KOV" secondAttribute="bottom" constant="29" id="FHs-9Y-11u"/>
+                            <constraint firstItem="rfr-fg-MiP" firstAttribute="top" secondItem="SPd-pU-KOV" secondAttribute="bottom" constant="15" id="FHs-9Y-11u"/>
                             <constraint firstItem="SPd-pU-KOV" firstAttribute="trailing" secondItem="rfr-fg-MiP" secondAttribute="trailing" id="I73-kA-u8V"/>
                             <constraint firstItem="Jpw-Gp-fAk" firstAttribute="leading" secondItem="uwU-5M-YY2" secondAttribute="leadingMargin" constant="86" id="Oz4-hK-Dvb"/>
                             <constraint firstItem="CzZ-8O-Cmz" firstAttribute="top" secondItem="IAx-CW-poV" secondAttribute="bottom" constant="32" id="QE5-zQ-vvj"/>
                             <constraint firstItem="vGo-7B-AEP" firstAttribute="trailing" secondItem="SPd-pU-KOV" secondAttribute="trailing" id="Vbe-b1-iTv"/>
                             <constraint firstItem="SPd-pU-KOV" firstAttribute="leading" secondItem="rfr-fg-MiP" secondAttribute="leading" id="aBH-Up-Krj"/>
-                            <constraint firstItem="SPd-pU-KOV" firstAttribute="top" secondItem="vGo-7B-AEP" secondAttribute="bottom" constant="28" id="amD-Nn-Wly"/>
+                            <constraint firstItem="SPd-pU-KOV" firstAttribute="top" secondItem="vGo-7B-AEP" secondAttribute="bottom" constant="12" id="amD-Nn-Wly"/>
                             <constraint firstItem="vGo-7B-AEP" firstAttribute="leading" secondItem="uwU-5M-YY2" secondAttribute="leadingMargin" constant="17" id="gRo-YD-aiw"/>
-                            <constraint firstItem="vGo-7B-AEP" firstAttribute="top" secondItem="Jpw-Gp-fAk" secondAttribute="bottom" constant="19" id="h9x-AU-6yc"/>
-                            <constraint firstItem="XsI-IQ-4QY" firstAttribute="top" secondItem="rfr-fg-MiP" secondAttribute="bottom" constant="221" id="ikb-3P-xUG"/>
-                            <constraint firstItem="Jpw-Gp-fAk" firstAttribute="top" secondItem="CzZ-8O-Cmz" secondAttribute="bottom" constant="14" id="iv4-kE-nSf"/>
+                            <constraint firstItem="vGo-7B-AEP" firstAttribute="top" secondItem="Jpw-Gp-fAk" secondAttribute="bottom" constant="-11" id="h9x-AU-6yc"/>
+                            <constraint firstItem="XsI-IQ-4QY" firstAttribute="top" secondItem="rfr-fg-MiP" secondAttribute="bottom" constant="316" id="ikb-3P-xUG"/>
+                            <constraint firstItem="Jpw-Gp-fAk" firstAttribute="top" secondItem="CzZ-8O-Cmz" secondAttribute="bottom" constant="-21" id="iv4-kE-nSf"/>
                             <constraint firstItem="vGo-7B-AEP" firstAttribute="centerX" secondItem="uwU-5M-YY2" secondAttribute="centerX" id="wgS-2B-h2a"/>
                             <constraint firstItem="CzZ-8O-Cmz" firstAttribute="centerX" secondItem="uwU-5M-YY2" secondAttribute="centerX" id="yF5-DI-AST"/>
                         </constraints>
