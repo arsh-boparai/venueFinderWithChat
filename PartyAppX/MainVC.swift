@@ -91,7 +91,9 @@ class MainVC: UIViewController {
             DataService.instance.saveMessage(user, message: messageText)
             messageTextField.text = ""
             dismissKeyboard()
+            
             tableView.reloadData()
+           
         }
     }
     
