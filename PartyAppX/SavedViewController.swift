@@ -18,7 +18,8 @@ class SavedViewController: UIViewController,UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        listTableView.delegate=self
+        listTableView.dataSource=self
         refArtists = Database.database().reference().child("events");
         refArtists.observe(DataEventType.value, with: {(snapshot) in
             if snapshot.childrenCount > 0{
@@ -40,24 +41,32 @@ class SavedViewController: UIViewController,UITableViewDataSource, UITableViewDe
         })
 
     }
+ 
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
+        
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             print("Deleted")
+     
             let party: LocationModel
             party = partyList[indexPath.row]
             ref = self.ref.child(party.id!)
             ref.removeValue()
-self.partyList.remove(at: indexPath.row)
-        self.listTableView.deleteRows(at: [indexPath], with: .automatic)
-    listTableView.reloadData()
-          
+           
+            self.partyList.remove(at: indexPath.row)
+
+            self.listTableView.deleteRows(at: [indexPath], with: .automatic)
+            let alert = UIAlertController(title: "Deleted", message: "Data Successfully Deleted.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            
         }
+        
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // Return the number of feed items
+     
         return partyList.count
         
     }

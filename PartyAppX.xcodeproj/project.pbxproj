@@ -22,6 +22,7 @@
 		E9D14394210A9ECA009BB3FD /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D14393210A9ECA009BB3FD /* MainVC.swift */; };
 		E9E61A5F210D36F50005A801 /* ViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A5E210D36F50005A801 /* ViewControllerTableViewCell.swift */; };
 		E9E61A61210E3F800005A801 /* GuestList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A60210E3F800005A801 /* GuestList.swift */; };
+		E9E61A63210E5BDC0005A801 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E61A62210E5BDC0005A801 /* SignUpViewController.swift */; };
 		E9FA43B4210AFA1300A90C5B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FA43B3210AFA1300A90C5B /* FirstViewController.swift */; };
 		E9FA43B6210AFA3E00A90C5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FA43B5210AFA3E00A90C5B /* ViewController.swift */; };
 		E9FA43B8210AFA7C00A90C5B /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FA43B7210AFA7C00A90C5B /* ThirdViewController.swift */; };
@@ -51,6 +52,7 @@
 		E9D14393210A9ECA009BB3FD /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		E9E61A5E210D36F50005A801 /* ViewControllerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell.swift; sourceTree = "<group>"; };
 		E9E61A60210E3F800005A801 /* GuestList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestList.swift; sourceTree = "<group>"; };
+		E9E61A62210E5BDC0005A801 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		E9FA43B3210AFA1300A90C5B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		E9FA43B5210AFA3E00A90C5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E9FA43B7210AFA7C00A90C5B /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				E9FA43B9210AFAAB00A90C5B /* FoodViewController.swift */,
 				E9FA43BD210AFB2200A90C5B /* SavedViewController.swift */,
 				E9FA43C1210AFB8300A90C5B /* RestaurantViewController.swift */,
+				E9E61A62210E5BDC0005A801 /* SignUpViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				E9FA43B4210AFA1300A90C5B /* FirstViewController.swift in Sources */,
 				E9D1438C210A9AAF009BB3FD /* AuthService.swift in Sources */,
 				E9D14394210A9ECA009BB3FD /* MainVC.swift in Sources */,
+				E9E61A63210E5BDC0005A801 /* SignUpViewController.swift in Sources */,
 				E9D14390210A9BE2009BB3FD /* Message.swift in Sources */,
 				E9E61A5F210D36F50005A801 /* ViewControllerTableViewCell.swift in Sources */,
 				E9567514210A94D7001409A3 /* AppDelegate.swift in Sources */,
