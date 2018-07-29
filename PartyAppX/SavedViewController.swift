@@ -5,68 +5,82 @@
 //  Created by Arshdeep Singh on 2018-07-16.
 //  Copyright © 2018 Nancy Sharma. All rights reserved.
 //
-
+import Firebase
 import UIKit
 
-class SavedViewController: UIViewController,UITableViewDataSource, UITableViewDelegate, HomeModelProtocol {
-    
+class SavedViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
+    var refArtists: DatabaseReference!
     @IBOutlet weak var listTableView: UITableView!
+   
+    var partyList = [LocationModel]()
+
+    var ref = Database.database().reference().child("events");
     
-    
-    var feedItems: NSArray = NSArray()
-    var selectedLocation : LocationModel = LocationModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.listTableView.delegate = self
-        self.listTableView.dataSource = self
-        
-        let homeModel = HomeModel()
-        homeModel.delegate = self
-        homeModel.downloadItems()
-        // Do any additional setup after loading the view.
-    }
-    func itemsDownloaded(items: NSArray) {
-        
-        feedItems = items
-        self.listTableView.reloadData()
-    }
     
+        refArtists = Database.database().reference().child("events");
+        refArtists.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0{
+                self.partyList.removeAll()
+                for parties in snapshot.children.allObjects as![DataSnapshot]{
+                    let partyObject = parties.value as? [String: AnyObject]
+                    let partyName = partyObject?["eventName"]
+                    let partyTheme = partyObject?["eventTheme"]
+                    let partyDate = partyObject?["eventDate"]
+                    let partyPlace = partyObject?["eventPlace"]
+                  let partyId = partyObject?["id"]
+                    
+                    
+                    let event = LocationModel(name: partyName as! String, theme: partyTheme as! String, place: partyPlace as! String, eventdate: partyDate as! String,id: partyId as! String)
+                    self.partyList.append(event)
+                }
+                self.listTableView.reloadData()
+            }
+        })
+
+    }
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            print("Deleted")
+            let party: LocationModel
+            party = partyList[indexPath.row]
+            ref = self.ref.child(party.id!)
+            ref.removeValue()
+self.partyList.remove(at: indexPath.row)
+        self.listTableView.deleteRows(at: [indexPath], with: .automatic)
+    listTableView.reloadData()
+          
+        }
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of feed items
-        return feedItems.count
+        return partyList.count
         
     }
-    
+ 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        // Retrieve cell
-        let cellIdentifier: String = "BasicCell"
-        let myCell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
-        // Get the location to be shown
-        let item: LocationModel = feedItems[indexPath.row] as! LocationModel
-        // Get references to labels of cell
-        myCell.textLabel!.text = item.name
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BasicCell", for: indexPath) as! ViewControllerTableViewCell
         
-        return myCell
+        //the artist object
+        let artist: LocationModel
+        
+        //getting the artist of selected position
+        artist = partyList[indexPath.row]
+        
+        //adding values to labels
+        cell.label1.text = "Event Name : "+"\(String(describing: artist.name!))"
+        cell.label2.text = "Event Theme : "+"\(artist.theme!)"
+        cell.label3.text = "Event Place : "+"\(artist.place!)"
+        cell.label4.text = "Event Date : "+"\(artist.eventdate!)"
+        
+        //returning cell
+        return cell
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        // Set selected location to var
-        selectedLocation = feedItems[indexPath.row] as! LocationModel
-        // Manually call segue to detail view controller
-        self.performSegue(withIdentifier: "detailSegue", sender: self)
-        
-    }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        // Get reference to the destination view controller
-        let detailVC  = segue.destination as! DetailViewController
-        // Set the property to the selected location so when the view for
-        // detail view controller loads, it can access that property to get the feeditem obj
-        detailVC.selectedLocation = selectedLocation
-    }
-    
-    
-    
+
     
 }

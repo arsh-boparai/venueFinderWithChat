@@ -26,7 +26,7 @@ class FirstViewController: UIViewController,  CNContactPickerDelegate, UITableVi
     }
     func addEvents(){
         let key = refArtists.childByAutoId().key
-        let event = ["id":key,"eventName": name.text! as String,"eventTheme": theme.text! as String,"eventPlace": place.text! as String,"eventDate": dateLabel.text! as String,"Guests List": contactss ] as [String : Any]
+        let event = ["id":key,"eventName": name.text! as String,"eventTheme": theme.text! as String,"eventPlace": place.text! as String,"eventDate": dateLabel.text! as String,"GuestsList": contactss ] as [String : Any]
        
         refArtists.child(key).setValue(event)
         labelMessage.text = "Event Saved"
