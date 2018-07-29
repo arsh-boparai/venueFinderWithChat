@@ -22,8 +22,7 @@ class ViewController: UIViewController {
     let locationManager = CLLocationManager()
     
     @IBOutlet weak var mapView: MKMapView!
-    @IBAction func restaurantbtn(_ sender: UIButton) {
-        
+    @IBAction func restfinder(_ sender: UIButton) {
         let request = MKLocalSearchRequest()
         request.naturalLanguageQuery = "Venues"
         request.region = mapView.region
@@ -45,6 +44,10 @@ class ViewController: UIViewController {
             
         }
     }
+    //    func resto() {
+//        
+//       
+//    }
     
     
     override func viewDidLoad() {
@@ -66,7 +69,8 @@ class ViewController: UIViewController {
         definesPresentationContext = true
         locationSearchTable.mapView = mapView
         locationSearchTable.handleMapSearchDelegate = self
-        
+       // resto()
+       
     }
     
     func getDirections(){
