@@ -73,7 +73,7 @@ class ViewController: UIViewController {
        
     }
     
-    func getDirections(){
+    @objc func getDirections(){
         guard let selectedPin = selectedPin else { return }
         let mapItem = MKMapItem(placemark: selectedPin)
         let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]

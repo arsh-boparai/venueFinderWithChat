@@ -18,11 +18,11 @@ class SignUpViewController: UIViewController {
     {
         super.viewDidLoad()
     
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SignUpViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
     }
-    func dismissKeyboard() {
+    @objc func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
         
@@ -44,9 +44,12 @@ class SignUpViewController: UIViewController {
                     print("You have successfully signed up")
                     //Goes to the Setup page which lets the user take a photo for their profile picture and also chose a username
                     let alert = UIAlertController(title: "SIGN UP", message: "You Have Successfully Signed Up", preferredStyle: UIAlertControllerStyle.alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {ACTION in
+                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+                        self.present(vc!, animated: true, completion: nil)
+                    }))
                   
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+                   
                     self.present(alert, animated: true, completion: nil)
                     
                 } else {

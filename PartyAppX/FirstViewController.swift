@@ -8,11 +8,30 @@
 import Contacts
 import ContactsUI
 import UIKit
+import MessageUI
 import Firebase
 
-class FirstViewController: UIViewController,  CNContactPickerDelegate, UITableViewDelegate, UITableViewDataSource {
+class FirstViewController: UIViewController,  CNContactPickerDelegate, UITableViewDelegate, UITableViewDataSource, MFMessageComposeViewControllerDelegate  {
     var refArtists: DatabaseReference!
     var contactss = [String]()
+     var contactsNumber = [String]()
+   
+   
+    func canSendText() -> Bool {
+        return MFMessageComposeViewController.canSendText()
+        
+    }
+    func configuredMessageComposeViewController() -> MFMessageComposeViewController {
+        let messageComposeVC = MFMessageComposeViewController()
+        messageComposeVC.messageComposeDelegate = self  //  Make sure to set this property to self, so that the controller can be dismissed!
+        messageComposeVC.recipients = contactsNumber
+                messageComposeVC.body =  "Event Invitation: \n" + "Event Name: " + "\(String(describing: name.text!))\n" + "Theme: "  + "\(String(describing: theme.text!))\n" + "Place: "  + "\(String(describing: place.text!))\n" + "Date: "  + "\(String(describing: dateLabel.text!))\n"
+      
+        return messageComposeVC
+    }
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        controller.dismiss(animated: true, completion: nil)
+    }
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -20,7 +39,7 @@ class FirstViewController: UIViewController,  CNContactPickerDelegate, UITableVi
       tableView.dataSource = self
         tableView.delegate = self
         refArtists = Database.database().reference().child("events");
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(FirstViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
      
     }
@@ -35,10 +54,10 @@ class FirstViewController: UIViewController,  CNContactPickerDelegate, UITableVi
         for contact in contacts {
             
             contactss.append(contact.givenName)
+            contactsNumber.append((contact.phoneNumbers[0].value ).value(forKey: "digits") as! String)
+           
         }
-        for element in contactss {
-            print(element, terminator: " ")
-        }
+      
       
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -102,16 +121,25 @@ class FirstViewController: UIViewController,  CNContactPickerDelegate, UITableVi
     }
     
     @IBAction func Save(_ sender: UIButton) {
-        
-     addEvents()
+        addEvents()
         let alert = UIAlertController(title: "Data Saved", message: "Invitation Sent to the Selected Guests.", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {ACTION in self.messagesending()}))
         self.present(alert, animated: true, completion: nil)
         labelMessage.isHidden = true
+       
     }
-    
+    func  messagesending(){
+    if(canSendText()){
+    let m = configuredMessageComposeViewController()
+    present(m, animated: true, completion: nil)
+    }else{
+    let errorAlert = UIAlertController(title: "cannot Send Text Message", message: "Your Device is not able to send text message.", preferredStyle: UIAlertControllerStyle.alert)
+    errorAlert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+    self.present(errorAlert, animated: true, completion: nil)
+    }
+    }
    
-    func dismissKeyboard() {
+    @objc func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
         
