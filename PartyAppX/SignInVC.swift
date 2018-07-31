@@ -19,6 +19,8 @@ class SignInVC: UIViewController {
         super.viewDidLoad()
         
         signInButton.layer.cornerRadius = 8
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SignUpViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -28,7 +30,11 @@ class SignInVC: UIViewController {
             performSegue(withIdentifier: "showMainVC", sender: nil)
         }
     }
-    
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+        
+    }
     func showAlert(title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
