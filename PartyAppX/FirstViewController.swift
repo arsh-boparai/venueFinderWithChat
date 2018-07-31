@@ -122,7 +122,7 @@ class FirstViewController: UIViewController,  CNContactPickerDelegate, UITableVi
     
     @IBAction func Save(_ sender: UIButton) {
         addEvents()
-        let alert = UIAlertController(title: "Data Saved", message: "Invitation Sent to the Selected Guests.", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Data Saved", message: "Send Invitation to the Selected Guests.", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {ACTION in self.messagesending()}))
         self.present(alert, animated: true, completion: nil)
         labelMessage.isHidden = true

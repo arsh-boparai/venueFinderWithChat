@@ -59,7 +59,9 @@ class SavedViewController: UIViewController,UITableViewDataSource, UITableViewDe
 
             self.listTableView.deleteRows(at: [indexPath], with: .automatic)
             let alert = UIAlertController(title: "Deleted", message: "Data Successfully Deleted.", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {ACTION in
+            _ = self.navigationController?.popToRootViewController(animated: true)
+             }))
             self.present(alert, animated: true, completion: nil)
             
         }

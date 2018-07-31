@@ -319,13 +319,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THEME: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myD-8w-8WJ">
-                                <rect key="frame" x="52" y="109" width="79" height="52"/>
+                                <rect key="frame" x="20" y="109" width="79" height="52"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAME: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6h3-Sf-PAV">
-                                <rect key="frame" x="52" y="81" width="79" height="20"/>
+                                <rect key="frame" x="20" y="81" width="79" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="79" id="gEB-bm-mGd"/>
                                 </constraints>
@@ -334,20 +334,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLACE:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jh5-nD-l5k">
-                                <rect key="frame" x="52" y="169" width="79" height="32"/>
+                                <rect key="frame" x="20" y="169" width="79" height="32"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Place" textAlignment="natural" clearsOnBeginEditing="YES" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="qNZ-1y-77t">
-                                <rect key="frame" x="147" y="170" width="208" height="30"/>
+                                <rect key="frame" x="115" y="170" width="240" height="30"/>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="name"/>
                             </textField>
                             <textField opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the name.." textAlignment="natural" clearsOnBeginEditing="YES" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="ca7-b4-0zK">
-                                <rect key="frame" x="147" y="72" width="208" height="30"/>
+                                <rect key="frame" x="115" y="72" width="240" height="30"/>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
@@ -360,7 +360,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Theme of the party" textAlignment="natural" clearsOnBeginEditing="YES" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="kVF-Fw-3AD">
-                                <rect key="frame" x="147" y="120" width="208" height="30"/>
+                                <rect key="frame" x="115" y="120" width="240" height="30"/>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
@@ -370,13 +370,13 @@
                                 <rect key="frame" x="103" y="585" width="168" height="30"/>
                                 <color key="backgroundColor" red="0.80460611979999996" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
-                                <state key="normal" title="SAVE"/>
+                                <state key="normal" title="Send/Save"/>
                                 <connections>
                                     <action selector="Save:" destination="vdM-20-UaF" eventType="touchUpInside" id="vmh-AG-BRz"/>
                                 </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="f7A-E8-CrL">
-                                <rect key="frame" x="21" y="225" width="334" height="70"/>
+                                <rect key="frame" x="20" y="225" width="335" height="70"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="8cO-9t-JPQ"/>
@@ -406,14 +406,14 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4C9-1t-veS">
-                                <rect key="frame" x="22" y="350" width="314" height="227"/>
+                                <rect key="frame" x="20" y="350" width="335" height="227"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myCell5" id="z3F-wJ-CP5">
-                                        <rect key="frame" x="0.0" y="28" width="314" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="335" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z3F-wJ-CP5" id="95u-8w-vdq">
-                                            <rect key="frame" x="0.0" y="0.0" width="314" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -505,7 +505,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LSF-Pb-pks" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1688.8" y="-320.68965517241384"/>
+            <point key="canvasLocation" x="1606" y="-321"/>
         </scene>
         <!--Saved Events-->
         <scene sceneID="ofU-2O-8SN">
@@ -527,33 +527,33 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="156.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ml9-cW-6Ut">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ml9-cW-6Ut">
                                                     <rect key="frame" x="27" y="11" width="326" height="32"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="32" id="Pqz-8H-7TK"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="12"/>
                                                     <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gE-vP-aFI">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gE-vP-aFI">
                                                     <rect key="frame" x="27" y="44" width="326" height="32"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="32" id="4jh-oB-ijc"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="12"/>
                                                     <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tt7-LI-LQV">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tt7-LI-LQV">
                                                     <rect key="frame" x="27" y="74" width="326" height="32"/>
-                                                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="12"/>
                                                     <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKy-Ai-jzG">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKy-Ai-jzG">
                                                     <rect key="frame" x="27" y="107" width="326" height="32"/>
-                                                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="12"/>
                                                     <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -821,9 +821,13 @@
                             <constraint firstItem="JJf-uS-yk1" firstAttribute="leading" secondItem="3Lj-Fc-tie" secondAttribute="leading" id="EAF-eD-rhr"/>
                             <constraint firstItem="iIn-LW-xe7" firstAttribute="top" secondItem="m9v-Db-LdC" secondAttribute="top" constant="5" id="G8n-Tx-2b2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JJf-uS-yk1" secondAttribute="trailing" constant="-16" id="Jhg-3v-USM"/>
+                            <constraint firstItem="JJf-uS-yk1" firstAttribute="top" secondItem="m9v-Db-LdC" secondAttribute="top" id="JpJ-W0-cIy"/>
+                            <constraint firstItem="JJf-uS-yk1" firstAttribute="leading" secondItem="m9v-Db-LdC" secondAttribute="leading" id="Zap-zA-8tY"/>
                             <constraint firstItem="iIn-LW-xe7" firstAttribute="top" secondItem="m9v-Db-LdC" secondAttribute="top" constant="5" id="cCP-Yp-cCE"/>
                             <constraint firstItem="JJf-uS-yk1" firstAttribute="bottom" secondItem="m9v-Db-LdC" secondAttribute="bottom" id="dfn-Q1-RQf"/>
+                            <constraint firstItem="JJf-uS-yk1" firstAttribute="trailing" secondItem="m9v-Db-LdC" secondAttribute="trailing" id="gpX-CD-nzQ"/>
                             <constraint firstItem="JJf-uS-yk1" firstAttribute="top" secondItem="m9v-Db-LdC" secondAttribute="top" id="hLi-ss-atL"/>
+                            <constraint firstItem="JJf-uS-yk1" firstAttribute="bottom" secondItem="m9v-Db-LdC" secondAttribute="bottom" id="tE5-BZ-N6x"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="m9v-Db-LdC"/>
                     </view>
@@ -938,7 +942,7 @@
         <!--Planning-->
         <scene sceneID="gwf-wP-ITE">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Oof-RN-GMY" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Plan" automaticallyAdjustsScrollViewInsets="NO" id="Oof-RN-GMY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Planning" image="planning" landscapeImage="planning" largeContentSizeImage="planning" selectedImage="planning" id="cIa-Ze-AhB"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4BZ-fh-84A">
@@ -1056,6 +1060,6 @@
         <image name="planning" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="x6Y-zS-CFD"/>
+        <segue reference="SO1-8V-rbc"/>
     </inferredMetricsTieBreakers>
 </document>
